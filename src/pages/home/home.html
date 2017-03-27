@@ -10,10 +10,10 @@
 <ion-content>
   <ion-card *ngFor="let passage of passages">
     <ion-item>
-      <ion-avatar item-left (click)=openContactDetail()>
+      <ion-avatar item-left (click)=openHomepage()>
         <img src="{{passage.pimg}}">
       </ion-avatar>
-      <h2 (click)=openContactDetail()>{{passage.author}}</h2>
+      <h2 (click)=openHomepage()>{{passage.author}}</h2>
       <p>来自{{passage.from}}</p>
     </ion-item>
     <img src="{{passage.img}}" (click)="openDetail($event,passage)">

@@ -1,58 +1,54 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-buttons start>
-      <button ion-button icon-only (click)="dismiss()">
-      <ion-icon name="arrow-back"></ion-icon>
-    </button>
-    </ion-buttons>
+
 
     <ion-title>
       <!-- {{item.contactname}} -->
-      xxx社团主页
+      详细信息
     </ion-title>
 
   </ion-navbar>
 
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 	<!-- {{item.contacttext}} -->
-  <ion-card>
 
+<ion-list>
   <ion-item>
     <ion-avatar item-left>
       <img src="assets/images/1.jpg">
     </ion-avatar>
-    <h2>Marty McFly</h2>
-    <p>November 5, 1955</p>
+    <h2>小米音协会</h2>
+    <p>社团账号：6666</p>
   </ion-item>
 
-  <img src="assets/images/7.jpg">
+     <p> 这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介。</p>
 
-  <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-  </ion-card-content>
+</ion-list>
 
-  <ion-row>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>12 Likes</div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-    </ion-col>
-    <ion-col center text-center>
-      <ion-note>
-        11h ago
-      </ion-note>
-    </ion-col>
-  </ion-row>
 
-</ion-card>
+<button ion-button block (click)="openhomepage()">进入社团主页</button>
+<button ion-button block >特别关注</button>
+<button ion-button block >发送私信</button>
+
+<!-- <ion-list padding>
+
+
+
+    <ion-item (click)="openhomepage()">
+      进入社团主页
+      <ion-icon name='home' item-left></ion-icon>
+      <ion-icon name='arrow-forward' item-right></ion-icon>
+    </ion-item>
+
+
+
+
+  </ion-list> -->
+
+
+
+
 </ion-content>

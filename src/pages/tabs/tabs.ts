@@ -11,7 +11,7 @@ import { ContactPage } from '../contact/contact';
 })
 export class TabsPage {
 
-    @ViewChild('myTabs') tabRef: Tabs;
+    @ViewChild('myTabs') tabs: Tabs;
   // this tells the tabs component which Pages
   // should be each tab's root Page
   tab1Root: any = HomePage;
@@ -23,6 +23,6 @@ export class TabsPage {
   }
 
   ionViewDidEnter(){
-    this.tabRef.select(0);
+    this.tabs.select(0);
   }
 }

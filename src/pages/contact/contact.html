@@ -6,7 +6,7 @@
     <ion-title>社团</ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only (click)="add()">
+      <button ion-button icon-only (click)="presentPopover()">
 	    <ion-icon name="add"></ion-icon>
 	  </button>
     </ion-buttons>
@@ -51,7 +51,7 @@
 
     <ion-list *ngSwitchCase="'favorite'">
 
-        <ion-item *ngFor="let contact of favorites">
+        <ion-item *ngFor="let contact of favorites" (click)="openManagePage($event,contact)">
           <ion-avatar item-left>
             <img src="assets/images/{{contact.contactid}}.jpg">
           </ion-avatar>

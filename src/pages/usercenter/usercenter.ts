@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController} from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { UserEdit } from '../useredit/useredit';
 
 @Component({
   selector: 'page-usercenter',
@@ -21,7 +22,7 @@ export class UserCenter {
     if (this.storage["Logined"] == "true") {
       //已经登陆的状态，不用跳转，显示用户信息即可
       this.user.headface = "assets/images/" + this.storage["username"] + ".jpg";
-      
+
     }
     else {
       let loginModal = this.modalCtrl.create(LoginPage);
@@ -41,5 +42,8 @@ export class UserCenter {
       this.user.headface = "assets/images/" + data + ".jpg";
 				})
     loginModal.present();
+  }
+  edit(event){
+    this.navCtrl.push(UserEdit);
   }
 }

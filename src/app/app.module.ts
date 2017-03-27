@@ -14,8 +14,11 @@ import {MessageDetail} from '../pages/messagedetail/messagedetail';
 import { LoginPage } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Organizations } from '../pages/organizations/organizations';
-import { OrganizationDetail } from '../pages/organizationdetail/organizationdetail';
-
+import { ManagePage } from '../pages/manage/manage';
+import { PopoverPage } from '../pages/popover/popover';
+import { AddManage } from '../pages/addmanage/addmanage';
+import { UserEdit } from '../pages/useredit/useredit';
+import { CommunityHomepage } from '../pages/communityhomepage/communityhomepage';
 @NgModule({
   declarations: [
     MyApp,
@@ -30,10 +33,16 @@ import { OrganizationDetail } from '../pages/organizationdetail/organizationdeta
     MessageDetail,
     LoginPage,
     Register,
-    OrganizationDetail
+    ManagePage,
+    PopoverPage,
+    AddManage,
+    UserEdit,
+    CommunityHomepage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages: 'true'         //隐藏全部子页面tabs
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,7 +58,11 @@ import { OrganizationDetail } from '../pages/organizationdetail/organizationdeta
     MessageDetail,
     LoginPage,
     Register,
-    OrganizationDetail
+    ManagePage,
+    PopoverPage,
+    AddManage,
+    UserEdit,
+    CommunityHomepage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

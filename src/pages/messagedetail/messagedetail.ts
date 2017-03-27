@@ -12,7 +12,4 @@ export class MessageDetail {
     this.item = this.params.get('item');
   }
 
-  dismiss(){
-    this.viewCtrl.dismiss();
-  }
 }

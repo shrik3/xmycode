@@ -3,6 +3,12 @@
     <ion-title>
       用户中心
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="edit($event)">
+      <ion-icon name="brush"></ion-icon>
+    </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -15,9 +21,49 @@
 </ion-row>
 
 
+<ion-list no-border>
+
+   <ion-list-header>
+     个人资料
+   </ion-list-header>
+
+   <ion-item>
+     用户名
+     <ion-note item-right>
+     奋斗的小鸟
+     </ion-note>
+   </ion-item>
+
+   <ion-item>
+     个性签名
+     <ion-note item-right>
+     包子油条胡辣汤
+     </ion-note>
+   </ion-item>
+
+   <ion-item>
+     年龄
+     <ion-note item-right>
+     20
+     </ion-note>
+   </ion-item>
+
+   <ion-item>
+     QQ
+     <ion-note item-right>
+     7638193746
+     </ion-note>
+   </ion-item>
+   <ion-item>
+     WeChat
+     <ion-note item-right>
+     111222333
+     </ion-note>
+   </ion-item>
+
+ </ion-list>
 
 
-   已登陆页面
 <button ion-button block (click)= "logout()">注销</button>
 
 </ion-content>

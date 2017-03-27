@@ -9,7 +9,7 @@ export class Organizations {
   organizations: any;
   constructor(public params: NavParams,
   public viewCtrl: ViewController){
-    
+
     this.organizations = [{ contactid: 1, contactname: "One", contacttext: "You are my favorite person in my life." },
       { contactid: 2, contactname: "Two", contacttext: "If you get tired, learn to rest, not to quit." },
       { contactid: 3, contactname: "Three", contacttext: "Beauty is to fight for rather than to wait for." },
@@ -17,7 +17,5 @@ export class Organizations {
       { contactid: 5, contactname: "Five", contacttext: "In fact, each of the road leading to the sun, are full of frustrations." }];
   }
 
-  dismiss(){
-    this.viewCtrl.dismiss();
-  }
+
 }

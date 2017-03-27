@@ -14,7 +14,8 @@ export class MessagesPage {
   }
 
   openMessage(event,message){
-    let messageModal = this.modalCtrl.create(MessageDetail,{item:message});
-  	messageModal.present();
+    // let messageModal = this.modalCtrl.create(MessageDetail,{item:message});
+  	// messageModal.present();
+    this.navCtrl.push(MessageDetail,{item:message});
   }
 }

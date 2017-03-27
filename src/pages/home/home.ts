@@ -4,8 +4,10 @@ import { NavController ,MenuController,ModalController} from 'ionic-angular';
 
 import { HomeDetail } from '../homedetail/homedetail';
 import { LoginPage } from '../login/login';
-import { ContactDetails } from '../contactdetails/contactdetails';
-
+// import { ContactDetails } from '../contactdetails/contactdetails';
+import { CommunityHomepage} from '../communityhomepage/communityhomepage';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -17,12 +19,19 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     public menuCtrl: MenuController,
-    public modalCtrl: ModalController) {
+    public modalCtrl: ModalController,
+  private http:Http) {
 
       if(this.storage['Logined'] != 'true'){
         let LoginModal = this.modalCtrl.create(LoginPage);
         LoginModal.present();
+
+
       }
+
+      this.http.get('http://150.95.136.199/community/1').map(res=>res.json()).subscribe(data=>{
+        console.log(data);
+      });
 
 
     this.menuCtrl.enable(true);
@@ -71,9 +80,9 @@ export class HomePage {
     }, 2000);
   }
 
-  openContactDetail(){
-    let detailModal = this.modalCtrl.create(ContactDetails);
-    detailModal.present();
+  openHomepage(){
+
+    this.navCtrl.push(CommunityHomepage);
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, ToastController, ActionSheetController,ModalController} from 'ionic-angular';
+import { NavController, PopoverController , AlertController, ToastController, ActionSheetController,ModalController} from 'ionic-angular';
 import { ContactDetails } from '../contactdetails/contactdetails';
-import { Organizations } from '../organizations/organizations';
+import { ManagePage } from '../manage/manage';
+import { PopoverPage } from '../popover/popover';
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
@@ -16,7 +17,8 @@ export class ContactPage {
   public alertCtrl: AlertController,
   public toastCtrl: ToastController,
   public actionSheetCtrl: ActionSheetController,
-  public modalCtrl: ModalController) {
+  public modalCtrl: ModalController,
+  public popoverCtrl: PopoverController) {
 
   this.favorites = [];
 
@@ -28,9 +30,8 @@ export class ContactPage {
 
 itemClick(event, contact) {
   //点击时加载详细页面
-  // this.navCtrl.push(ContactDetails, { item: contact });
-  let detailModal = this.modalCtrl.create(ContactDetails);
-  detailModal.present();
+  this.navCtrl.push(ContactDetails);
+
 }
 
 removeContact(contact) {
@@ -144,9 +145,16 @@ doRefresh(refresher){
   }, 1000);
 }
 
-add(){
-  let addModal = this.modalCtrl.create(Organizations);
-  addModal.present();
+openManagePage(event, contact) {
+  //点击时加载社团管理页面
+  this.navCtrl.push(ManagePage);
+
+}
+
+presentPopover(){
+  let popover = this.popoverCtrl.create(PopoverPage);
+  popover.present({ev:event});
+
 }
 
 }
