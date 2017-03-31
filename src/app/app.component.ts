@@ -1,13 +1,14 @@
 // import { Component, ViewChild } from '@angular/core';
-// import { Nav, Platform } from 'ionic-angular';
+//import { Nav, Platform } from 'ionic-angular';
 import { Component, ViewChild} from '@angular/core';
-import { Nav, Platform ,ActionSheetController } from 'ionic-angular';
+import {Nav, Platform, ActionSheetController, MenuController} from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-// import { Organizations } from '../pages/organizations/organizations';
+//import { Organizations } from '../pages/organizations/organizations';
 // import { AddManage } from '../pages/addmanage/addmanage';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { UserCenter } from '../pages/usercenter/usercenter';
+import {SettingsPage} from "../pages/settings/settings";
 
 
 @Component({
@@ -23,7 +24,9 @@ export class MyApp {
   pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform,
-  public actionSheetCtrl: ActionSheetController) {
+              public actionSheetCtrl: ActionSheetController,
+              private menuCtrl: MenuController
+               ) {
     this.rootPage = TabsPage;
     this.initializeApp();
 
@@ -61,8 +64,8 @@ export class MyApp {
           // }
 
 
-          let tabs = page.tabs;
-          let activeNav = tabs.getSelected();
+          //let tabs = page.tabs;
+          //let activeNav = tabs.getSelected();
 
           // if (!activeNav.canGoBack()) {
           //   //检测到在 tab 页面的顶层点击了返回按钮。
@@ -91,5 +94,10 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.push(page.component);
+  }
+
+  openSettingsPage(){
+    this.nav.push(SettingsPage);
+    this.menuCtrl.close();
   }
 }

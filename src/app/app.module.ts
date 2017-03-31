@@ -19,6 +19,7 @@ import { PopoverPage } from '../pages/popover/popover';
 import { AddManage } from '../pages/addmanage/addmanage';
 import { UserEdit } from '../pages/useredit/useredit';
 import { CommunityHomepage } from '../pages/communityhomepage/communityhomepage';
+import {SettingsPage} from "../pages/settings/settings";
 @NgModule({
   declarations: [
     MyApp,
@@ -37,7 +38,8 @@ import { CommunityHomepage } from '../pages/communityhomepage/communityhomepage'
     PopoverPage,
     AddManage,
     UserEdit,
-    CommunityHomepage
+    CommunityHomepage,
+    SettingsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -62,7 +64,8 @@ import { CommunityHomepage } from '../pages/communityhomepage/communityhomepage'
     PopoverPage,
     AddManage,
     UserEdit,
-    CommunityHomepage
+    CommunityHomepage,
+    SettingsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
