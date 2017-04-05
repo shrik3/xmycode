@@ -20,6 +20,7 @@ export class ContactPage {
   public modalCtrl: ModalController,
   public popoverCtrl: PopoverController) {
 
+
   this.favorites = [];
 
   this.contacts = [{ id: 1, name: "One", brief: "You are my favorite person in my life." },

@@ -12,16 +12,17 @@ export class PopoverPage {
     public app: App,
     public modalCtrl: ModalController){
 
+
   }
 
 
     open(){
       this.navCtrl.push(Organizations);
-      this.viewCtrl.dismiss();
+      // this.viewCtrl.dismiss();
     }
     add(){
 
       this.navCtrl.push(AddManage);
-      this.viewCtrl.dismiss();
+      // this.viewCtrl.dismiss();
     }
 }

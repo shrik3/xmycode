@@ -24510,12 +24510,40 @@ ion-navbar.toolbar {
   background-color: #f4f4f4;
 }
 
+.alignCenter {
+  text-align: center;
+}
+
+.contactdetails img {
+  display: inline;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .footcolor {
   background: #f4f4f4;
 }
 
 .buttonicon {
   color: #f4f4f4;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.contactdetails img {
+  display: inline;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .logo {
