@@ -12,21 +12,23 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class=contactdetails>
 	<!-- {{item.contacttext}} -->
 
-<ion-list>
-  <ion-item>
-    <ion-avatar item-left>
-      <img src="assets/images/1.jpg">
-    </ion-avatar>
-    <h2>小米音协会</h2>
-    <p>社团账号：6666</p>
-  </ion-item>
+  <ion-row>
+  	<ion-col class=alignCenter>
 
-     <p> 这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介，这里是社团简介。</p>
+        <img src="assets/images/1.jpg">
 
-</ion-list>
+  	</ion-col>
+  </ion-row>
+
+    <h2 class="alignCenter">{{item.name}}</h2>
+    <p class="alignCenter">社团账号：{{item.id}}</p>
+
+
+     <p> {{item.brief}}</p>
+
 
 
 <button ion-button block (click)="openhomepage()">进入社团主页</button>

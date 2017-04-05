@@ -29,9 +29,9 @@ export class HomePage {
 
       }
 
-      this.http.get('http://150.95.136.199/community/1').map(res=>res.json()).subscribe(data=>{
-        console.log(data);
-      });
+      // this.http.get('http://150.95.136.199/community/1').map(res=>res.json()).subscribe(data=>{
+      //   console.log(data);
+      // });
 
 
     this.menuCtrl.enable(true);

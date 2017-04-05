@@ -34,10 +34,10 @@
       <ion-item-sliding *ngFor="let contact of contacts">
         <ion-item (press)="hold($event,contact)" (click)="itemClick($event,contact)">
           <ion-avatar item-left>
-            <img src="assets/images/{{contact.contactid}}.jpg">
+            <img src="assets/images/{{contact.id}}.jpg">
           </ion-avatar>
-          <h2>{{contact.contactname}}</h2>
-          <p>{{contact.contacttext}}</p>
+          <h2>{{contact.name}}</h2>
+          <p>{{contact.brief}}</p>
         </ion-item>
 
         <ion-item-options>
@@ -53,10 +53,10 @@
 
         <ion-item *ngFor="let contact of favorites" (click)="openManagePage($event,contact)">
           <ion-avatar item-left>
-            <img src="assets/images/{{contact.contactid}}.jpg">
+            <img src="assets/images/{{contact.id}}.jpg">
           </ion-avatar>
-          <h2>{{contact.contactname}}</h2>
-          <p>{{contact.contacttext}}</p>
+          <h2>{{contact.name}}</h2>
+          <p>{{contact.brief}}</p>
         </ion-item>
 
     </ion-list>

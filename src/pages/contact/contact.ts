@@ -22,15 +22,15 @@ export class ContactPage {
 
   this.favorites = [];
 
-  this.contacts = [{ contactid: 1, contactname: "One", contacttext: "You are my favorite person in my life." },
-    { contactid: 2, contactname: "Two", contacttext: "If you get tired, learn to rest, not to quit." },
-    { contactid: 3, contactname: "Three", contacttext: "Beauty is to fight for rather than to wait for." }];
+  this.contacts = [{ id: 1, name: "One", brief: "You are my favorite person in my life." },
+    { id: 2, name: "Two", brief: "If you get tired, learn to rest, not to quit." },
+    { id: 3, name: "Three", brief: "Beauty is to fight for rather than to wait for." }];
   }
 
 
 itemClick(event, contact) {
   //点击时加载详细页面
-  this.navCtrl.push(ContactDetails);
+  this.navCtrl.push(ContactDetails,{item:contact});
 
 }
 
@@ -136,8 +136,8 @@ hold(event, contact) {
 }
 
 doRefresh(refresher){
-  this.contacts[3]={ contactid: 1, contactname: "One", contacttext: "You are my favorite person in my life." };
-  this.contacts[4] = { contactid: 2, contactname: "Two", contacttext: "If you get tired, learn to rest, not to quit." };
+  this.contacts[3]={ id: 1, name: "One", brief: "You are my favorite person in my life." };
+  this.contacts[4] = { id: 2, name: "Two", brief: "If you get tired, learn to rest, not to quit." };
 
 
   setTimeout(() => {
