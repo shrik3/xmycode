@@ -5,4 +5,34 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+ <form [formGroup]="signupdata">
+   <ion-item>
+     <ion-label floating>用户名</ion-label>
+     <!-- <ion-input type="text" value="" [(ngModel)] = "signupdata.name"></ion-input> -->
+     <ion-input type="text" value="" formControlName="name"></ion-input>
+
+   </ion-item>
+
+    <ion-item>
+     <ion-label floating>密码</ion-label>
+     <!-- <ion-input type="password" value="" [(ngModel)]="signupdata.password"></ion-input> -->
+     <ion-input type="text" value="" formControlName="password"></ion-input>
+
+   </ion-item>
+
+   <!-- <ion-item>
+    <ion-label floating>验证密码</ion-label>
+    <ion-input type="password" value="" [(ngModel)]="signupdata.password"></ion-input>
+  </ion-item> -->
+
+  <ion-item>
+    <ion-label floating>邮箱</ion-label>
+    <!-- <ion-input type="text" value="" [(ngModel)] = "signupdata.email"></ion-input> -->
+    <ion-input type="text" value="" formControlName="email"></ion-input>
+
+  </ion-item>
+<button ion-button  (click)="signup(signupdata.value, $event)">创建账号</button>
+  <!-- <button ion-button block (click)= "signup()">创建账号</button> -->
+    </form>
+</ion-content>

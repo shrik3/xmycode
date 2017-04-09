@@ -1,26 +1,26 @@
 import { Component } from '@angular/core';
 import {NavParams, ViewController, LoadingController, NavController} from 'ionic-angular';
-import {Http} from '@angular/http';
-import 'rxjs/add/operator/map';
+import {ServiceTask } from '../../providers/service-task';
 import { ContactDetails} from '../contactdetails/contactdetails';
 @Component({
   selector: 'page-organizations',
-  templateUrl: 'organizations.html'
+  templateUrl: 'organizations.html',
+  providers: [ServiceTask]
 })
 export class Organizations {
 
   private organizations: any;
   constructor(public params: NavParams,
     public viewCtrl: ViewController,
-    private http: Http,
     public loadingCtrl: LoadingController,
-    public navCtrl: NavController
+    public navCtrl: NavController,
+    public service: ServiceTask
   ) {
 
 
 
     //请求Api获取社团列表
-    this.http.get('http://api.shrik3.com/api/community').map(res => res.json()).subscribe(data => {
+    this.service.get('http://api.shrik3.com/api/community').subscribe(data => {
       // console.log(data);
       this.organizations = data.communities;
 

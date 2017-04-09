@@ -5,7 +5,7 @@ import { Tabs } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { MessagesPage } from '../messages/messages';
 import { ContactPage } from '../contact/contact';
-// import { UserCenter } from '../usercenter/usercenter';
+
 @Component({
   templateUrl: 'tabs.html'
 })

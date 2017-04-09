@@ -3,7 +3,7 @@
   <ion-navbar>
 
     <ion-title>
-      {{item.author}}
+      {{item.title}}
     </ion-title>
 
   </ion-navbar>
@@ -11,5 +11,26 @@
 </ion-header>
 
 <ion-content padding>
-	<img src="{{item.img}}">
+	<img src="{{item.front_image}}">
+  <p>{{item.body}}</p>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{item.likes}} 赞</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>{{item.comments}} 评论</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        {{item.time}} ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
 </ion-content>

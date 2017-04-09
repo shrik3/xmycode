@@ -8,31 +8,37 @@
 </ion-header>
 
 <ion-content>
+
+<ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+  refreshingText="正在刷新...">
+  </ion-refresher-content>
+</ion-refresher>
   <ion-card *ngFor="let passage of passages">
     <ion-item>
       <ion-avatar item-left (click)=openHomepage()>
-        <img src="{{passage.pimg}}">
+        <img src="{{passage.icon}}">
       </ion-avatar>
-      <h2 (click)=openHomepage()>{{passage.author}}</h2>
-      <p>来自{{passage.from}}</p>
+      <h2 (click)=openHomepage()>{{passage.owner_name}}</h2>
+      <p>来自{{passage.owner_id}}</p>
     </ion-item>
-    <img src="{{passage.img}}" (click)="openDetail($event,passage)">
+    <img src="{{passage.front_image}}" (click)="openDetail($event,passage)">
 
-    <ion-card-content class="nowarp">
-      <p>{{passage.content}}</p>
+    <ion-card-content class="nowarp" (click)="openDetail($event,passage)">
+      <p>{{passage.body}}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>{{passage.feelgood}} 赞</div>
+          <div>{{passage.likes}} 赞</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
-          <div>{{passage.comment}} 评论</div>
+          <div>{{passage.comments}} 评论</div>
         </button>
       </ion-col>
       <ion-col center text-center>

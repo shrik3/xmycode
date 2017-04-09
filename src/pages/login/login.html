@@ -10,19 +10,19 @@
   <div class="logo">
 		<img src="assets/images/2.jpg" alt="Ionic logo">
 	</div>
- <ion-list>
+ <form [formGroup]="logindata">
   <ion-item>
     <ion-label floating>用户名</ion-label>
-    <ion-input type="text" value="" [(ngModel)] = "user.username"></ion-input>
+    <ion-input type="text" value="" formControlName = "name"></ion-input>
   </ion-item>
 
    <ion-item>
     <ion-label >密码</ion-label>
-    <ion-input type="password" value="" [(ngModel)]="user.password"></ion-input>
+    <ion-input type="password" value="" formControlName="password"></ion-input>
   </ion-item>
- </ion-list>
 
 <button ion-button block (click)= "login()">登录</button>
+    </form>
 <ion-grid>
   <ion-row>
     <ion-col>

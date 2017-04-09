@@ -3,9 +3,11 @@ import { NavController, ModalController} from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { UserEdit } from '../useredit/useredit';
 
+
 @Component({
   selector: 'page-usercenter',
-  templateUrl: 'usercenter.html'
+  templateUrl: 'usercenter.html',
+
 })
 
 
@@ -19,7 +21,8 @@ export class UserCenter {
   public storage = window.localStorage;
   constructor(public navCtrl: NavController,
 				public modalCtrl: ModalController) {
-    if (this.storage["Logined"] == "true") {
+          console.log(localStorage.getItem('Logined'));
+    if (localStorage.getItem('Logined') == "true") {
       //已经登陆的状态，不用跳转，显示用户信息即可
       this.user.headface = "assets/images/" + this.storage["username"] + ".jpg";
 

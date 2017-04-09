@@ -11,3 +11,8 @@
 ### 2017/3/27 20：24 上传demo_3 by fivelike
 * 完善了用户中心页面及资料编辑页面
 * 添加了社团详细信息页面
+---
+### 2017/4/9 23：33 上传demo_4 by fivelike
+* 对接登陆注册api
+* 丰富了部分页面
+* 抽离http请求类(post get without token)，表单正则验证类(name,password,email)
