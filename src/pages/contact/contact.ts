@@ -148,7 +148,7 @@ doRefresh(refresher){
 
 openManagePage(event, contact) {
   //点击时加载社团管理页面
-  this.navCtrl.push(ManagePage);
+  this.navCtrl.push(ManagePage,{item:contact});
 
 }
 
