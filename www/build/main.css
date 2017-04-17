@@ -24499,7 +24499,7 @@ ion-navbar.toolbar {
 }
 
 .mes {
-  border-top: 2px #387ef5;
+  border: 2px #387ef5;
 }
 
 .mes button {
@@ -24557,7 +24557,7 @@ ion-navbar.toolbar {
 }
 
 .mes {
-  border-top: 2px #387ef5;
+  border: 2px #387ef5;
 }
 
 .mes button {

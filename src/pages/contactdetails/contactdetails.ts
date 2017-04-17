@@ -7,13 +7,13 @@ import { CommunityHomepage } from '../communityhomepage/communityhomepage';
   templateUrl: 'contactdetails.html'
 })
 export class ContactDetails {
-	item : any;
+	item: any;
 	constructor(public params: NavParams,
   public navCtrl: NavController){
-		this.item = this.params.get('item');
+		this.item = params.get('item');
 	}
-  openhomepage(){
-    this.navCtrl.push(CommunityHomepage);
+  openhomepage(item){
+    this.navCtrl.push(CommunityHomepage,{item});
   }
 
 }

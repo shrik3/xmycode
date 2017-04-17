@@ -20,8 +20,10 @@ import { AddManage } from '../pages/addmanage/addmanage';
 import { UserEdit } from '../pages/useredit/useredit';
 import { CommunityHomepage } from '../pages/communityhomepage/communityhomepage';
 import {SettingsPage} from "../pages/settings/settings";
-import {PosterPage} from "../pages/poster/poster";
 import {PushposterPage} from "../pages/pushposter/pushposter";
+import {PushposterbuttonPage} from "../pages/pushposterbutton/pushposterbutton";
+import {PostersPage} from "../pages/posters/posters";
+import {PostersListService} from "../pages/posters/posters.model";
 @NgModule({
   declarations: [
     MyApp,
@@ -42,8 +44,9 @@ import {PushposterPage} from "../pages/pushposter/pushposter";
     UserEdit,
     CommunityHomepage,
     SettingsPage,
-    PosterPage,
-    PushposterPage
+    PushposterPage,
+    PushposterbuttonPage,
+    PostersPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -70,9 +73,13 @@ import {PushposterPage} from "../pages/pushposter/pushposter";
     UserEdit,
     CommunityHomepage,
     SettingsPage,
-    PosterPage,
-    PushposterPage
+    PushposterPage,
+    PushposterbuttonPage,
+    PostersPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+      {provide: ErrorHandler, useClass: IonicErrorHandler},
+      PostersListService
+    ]
 })
 export class AppModule {}

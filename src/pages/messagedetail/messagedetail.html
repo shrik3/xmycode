@@ -33,10 +33,15 @@
 </ion-content>
 
 <ion-footer class='mes'>
-
-  <ion-item>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
-  <button ion-button> <ion-icon name="send"></ion-icon></button>
+    <ion-row>
+        <ion-col col-10>
+            <ion-item item-left>
+                <ion-textarea></ion-textarea>
+            </ion-item>
+        </ion-col>
+        <ion-col class="sendbutton">
+            <button ion-button> <ion-icon name="send"></ion-icon></button>
+        </ion-col>
+    </ion-row>
 
 </ion-footer>

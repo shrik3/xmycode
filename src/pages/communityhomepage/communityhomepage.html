@@ -5,9 +5,13 @@
 
     <ion-title>
       <!-- {{item.contactname}} -->
-      xxx社团主页
+      2社团主页
     </ion-title>
-
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onNewPoster()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -20,7 +24,7 @@
     <ion-avatar item-left>
       <img src="assets/images/1.jpg">
     </ion-avatar>
-    <h2>Marty McFly</h2>
+    <h2>2</h2>
     <p>November 5, 1955</p>
   </ion-item>
 
@@ -51,4 +55,42 @@
   </ion-row>
 
 </ion-card>
+
+  <ion-card *ngFor="let poster of posters">
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/images/1.jpg">
+      </ion-avatar>
+      <h2>{{poster.title}}</h2>
+      <p>November 5, 1955</p>
+    </ion-item>
+
+    <img src="assets/images/7.jpg">
+
+    <ion-card-content>
+      <p>{{poster.article}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>0 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>0 Comments</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
 </ion-content>
