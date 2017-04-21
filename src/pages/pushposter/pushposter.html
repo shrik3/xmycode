@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{mode }} Recipe</ion-title>
+    <ion-title>{{mode }} Poster</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -28,7 +28,8 @@
     <ion-textarea formControlName="article" required ngModel></ion-textarea>
   </ion-item>
 <ion-item>
-  <ion-label floating>活动权限</ion-label>
+
+    <ion-label floating>活动权限</ion-label>
     <ion-select formControlName="selectype">
       <ion-option
         *ngFor="let option of selectOptions"

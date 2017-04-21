@@ -31,7 +31,7 @@
 </ion-refresher>
   <div [ngSwitch]="friends">
     <ion-list *ngSwitchCase="'all'">
-      <ion-item-sliding *ngFor="let contact of contacts">
+      <ion-item-sliding  *ngFor="let contact of contacts">
         <ion-item (press)="hold($event,contact)" (click)="itemClick($event,contact)">
           <ion-avatar item-left>
             <img src="assets/images/{{contact.id}}.jpg">

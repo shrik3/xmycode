@@ -5,7 +5,7 @@
 
     <ion-title>
       <!-- {{item.contactname}} -->
-      2社团主页
+      {{item.name}}社团主页
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="onNewPoster()">
@@ -22,9 +22,9 @@
 
   <ion-item>
     <ion-avatar item-left>
-      <img src="assets/images/1.jpg">
+      <img src="assets/images/{{item.id}}.jpg">
     </ion-avatar>
-    <h2>2</h2>
+    <h2>{{item.id}}</h2>
     <p>November 5, 1955</p>
   </ion-item>
 
@@ -38,20 +38,16 @@
     <ion-col>
       <button ion-button icon-left clear small>
         <ion-icon name="thumbs-up"></ion-icon>
-        <div>12 Likes</div>
+        <div>12 赞</div>
       </button>
     </ion-col>
     <ion-col>
       <button ion-button icon-left clear small>
         <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
+        <div>4 评论</div>
       </button>
     </ion-col>
-    <ion-col center text-center>
-      <ion-note>
-        11h ago
-      </ion-note>
-    </ion-col>
+
   </ion-row>
 
 </ion-card>
@@ -60,10 +56,11 @@
 
     <ion-item>
       <ion-avatar item-left>
-        <img src="assets/images/1.jpg">
+        <img src="assets/images/{{item.id}}.jpg">
       </ion-avatar>
       <h2>{{poster.title}}</h2>
-      <p>November 5, 1955</p>
+      <p>{{poster.time}}</p>
+
     </ion-item>
 
     <img src="assets/images/7.jpg">
@@ -76,20 +73,16 @@
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>0 Likes</div>
+          <div (click)="voteUp()">{{poster.votes}} 赞</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
-          <div>0 Comments</div>
+          <div>0 评论</div>
         </button>
       </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
+
     </ion-row>
 
   </ion-card>

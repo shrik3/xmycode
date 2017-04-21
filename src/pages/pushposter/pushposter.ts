@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import {Poster} from "../posters/poster.model";
 import {PostersListService} from "../posters/posters.model";
 import {FormGroup ,FormControl,Validators} from "@angular/forms";
+import {CommunityHomepage} from "../communityhomepage/communityhomepage";
+
 
 
 @Component({
@@ -10,26 +12,27 @@ import {FormGroup ,FormControl,Validators} from "@angular/forms";
   templateUrl: 'pushposter.html'
 })
 export class PushposterPage implements OnInit{
+  profilePicture: any="assets/images/7.jpg";
   mode:any;
   selectOptions = ['公开','非公开'];
   listItems: Poster[];
   posterForm:FormGroup;
-  constructor(private plService :PostersListService, private navCtrl: NavController,
-              private navParams: NavParams
+  constructor(private plService :PostersListService,
+              private navCtrl: NavController,
+              private navParams: NavParams,
     ){}
-
-
   ngOnInit() {
 
     this.mode = this.navParams.get('mode');
     this.initializeForm();
   }
   onSubmit(){
-    const value = this.posterForm.value;
-    this.plService.addItem(value.title, value.article);
+    var value = this.posterForm.value;
+    this.plService.addItem(value.title, value.article,new Date().toDateString());
     this.posterForm.reset();
     this.navCtrl.pop();
   }
+
   private initializeForm() {
     this.posterForm = new FormGroup({
       'title': new FormControl(null, Validators.required),

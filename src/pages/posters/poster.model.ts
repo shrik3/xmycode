@@ -3,6 +3,10 @@
  */
 export class Poster{
     constructor(public title: string,
-                public article:string){
+                public article:string,
+                public time:string
+                ){
+
     }
+
 }

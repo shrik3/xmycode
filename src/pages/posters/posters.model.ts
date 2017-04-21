@@ -5,8 +5,8 @@ import { Poster } from "./poster.model"
 export class PostersListService{
     private posters: Poster[] =[];
 
-    addItem(title:string, article:string){
-        this.posters.push(new Poster(title, article));
+    addItem(title:string, article:string,time:string){
+        this.posters.push(new Poster(title, article,time));
         console.log(this.posters);
     }
 
@@ -17,6 +17,7 @@ export class PostersListService{
     getItems(){
         return this.posters.slice();
     }
+
 
 
 }
